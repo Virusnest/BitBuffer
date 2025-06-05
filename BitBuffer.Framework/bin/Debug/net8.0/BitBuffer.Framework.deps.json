@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BitBuffer.Framework/1.0.0": {
+        "dependencies": {
+          "SDL3-CS": "3.2.14.2",
+          "SDL3-CS.Native": "3.2.4.2",
+          "StbImageSharp": "2.30.15",
+          "shaderc.net": "0.1.0"
+        },
+        "runtime": {
+          "BitBuffer.Framework.dll": {}
+        }
+      },
+      "SDL3-CS/3.2.14.2": {
+        "runtime": {
+          "lib/net8.0/SDL3-CS.dll": {
+            "assemblyVersion": "3.2.14.2",
+            "fileVersion": "3.2.14.2"
+          }
+        }
+      },
+      "SDL3-CS.Native/3.2.4.2": {
+        "runtime": {
+          "lib/net8.0/SDL3-CS.Native.dll": {
+            "assemblyVersion": "3.2.4.2",
+            "fileVersion": "3.2.4.2"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/SDL3.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/SDL3.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/SDL3.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "shaderc.net/0.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/shaderc.net.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "StbImageSharp/2.30.15": {
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {
+            "assemblyVersion": "2.30.15.0",
+            "fileVersion": "2.30.15.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BitBuffer.Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SDL3-CS/3.2.14.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wqWjIm2EP7PmXRQfwSxY4YJDSrXZ0QmolJMCJcs9KY4b3vYBdlwo0U4/olPMdBx6yRzqhN1nGJjmeC9OJT6L1g==",
+      "path": "sdl3-cs/3.2.14.2",
+      "hashPath": "sdl3-cs.3.2.14.2.nupkg.sha512"
+    },
+    "SDL3-CS.Native/3.2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j8eg2tAG9pY+dNGloC4cBAH2YZ1/GzoivdFBh01sYUpFaW8FdNAUtYKSyNq09tRULSYO9lZzhW8t7Lru9eg5aA==",
+      "path": "sdl3-cs.native/3.2.4.2",
+      "hashPath": "sdl3-cs.native.3.2.4.2.nupkg.sha512"
+    },
+    "shaderc.net/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LAHdMQy37AL2pPolX3vDJSBMyV3KSUUjeY26QHAN3EFKFWBRkOeveWFkAxcgDmq9Z1LpgI/AG6BB3JW4Ts8eew==",
+      "path": "shaderc.net/0.1.0",
+      "hashPath": "shaderc.net.0.1.0.nupkg.sha512"
+    },
+    "StbImageSharp/2.30.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
+      "path": "stbimagesharp/2.30.15",
+      "hashPath": "stbimagesharp.2.30.15.nupkg.sha512"
+    }
+  }
+}

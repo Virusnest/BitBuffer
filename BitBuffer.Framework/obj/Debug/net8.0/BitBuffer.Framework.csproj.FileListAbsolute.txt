@@ -1,0 +1,12 @@
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/bin/Debug/net8.0/BitBuffer.Framework.deps.json
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/bin/Debug/net8.0/BitBuffer.Framework.dll
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/bin/Debug/net8.0/BitBuffer.Framework.pdb
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.csproj.AssemblyReference.cache
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.GeneratedMSBuildEditorConfig.editorconfig
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.AssemblyInfoInputs.cache
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.AssemblyInfo.cs
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.csproj.CoreCompileInputs.cache
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.dll
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/refint/BitBuffer.Framework.dll
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.pdb
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/ref/BitBuffer.Framework.dll

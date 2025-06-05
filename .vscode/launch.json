@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Launch Example App",
+      "program": "${workspaceFolder}/Example/bin/Debug/net8.0/${input:executableName}.dll",
+      "preLaunchTask": "build-example"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "executableName",
+      "type": "promptString",
+      "description": "Enter the name of the output DLL (default: Example)"
+    }
+  ]
+}
