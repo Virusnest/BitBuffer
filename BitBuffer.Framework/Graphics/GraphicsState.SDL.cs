@@ -1,5 +1,7 @@
 using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using BitBuffer.Framework.Extensions;
 using BitBuffer.Framework.Util.MathUtils;
 using SDL3;
@@ -77,16 +79,11 @@ public class GraphicsStateSDL : GraphicsState
 
   public override IGraphicsResource CreateShader(Shader.ShaderInfo shaderInfo)
   {
-    if (shaderInfo.VertexSource == null || shaderInfo.FragmentSource == null)
-    {
-      throw new ArgumentException("Shader sources cannot be null.");
-    }
-    if (shaderInfo.VertexEntryPoint == null || shaderInfo.FragmentEntryPoint == null)
-    {
-      throw new ArgumentException("Shader entry points cannot be null.");
-    }
+
     nint vertexShaderHandle = CompileShader(shaderInfo.VertexSource, ShaderCross.ShaderStage.Vertex, shaderInfo.IncludeDir, false, shaderInfo.VertexEntryPoint);
     nint fragmentShaderHandle = CompileShader(shaderInfo.FragmentSource, ShaderCross.ShaderStage.Fragment, shaderInfo.IncludeDir, false, shaderInfo.FragmentEntryPoint);
+
+
     return new ShaderResource
     {
       VertexHandle = vertexShaderHandle,
@@ -406,26 +403,26 @@ public class GraphicsStateSDL : GraphicsState
   }
   private nint CompileShader(string source, ShaderCross.ShaderStage shaderStage, string? includeDir = null, bool enableDebug = false, string Entrypoint = "main")
   {
-    ShaderCross.Init();
-    var wa = ShaderCross.CompileGraphicsShaderFromHLSL(
-      _gpuDevice,
-      new ShaderCross.HLSLInfo
-      {
-        Entrypoint = Entrypoint,
-        ShaderStage = shaderStage,
-        IncludeDir = includeDir,
-        Defines = nint.Zero,
-        Source = source,
-        EnableDebug = true
-      },
-      out var a
-    );
-    ShaderCross.Quit();
-    if (wa == nint.Zero)
+    var hlslinfo = new ShaderCross.HLSLInfo
+    {
+      Entrypoint = Entrypoint,
+      ShaderStage = ShaderCross.ShaderStage.Vertex,
+      IncludeDir = "",
+      Props = 0,
+      Name = "Pain.hlsl",
+      Defines = nint.Zero,
+      Source = source,
+      EnableDebug = false
+    };
+    var shaderHandle = ShaderCross.CompileGraphicsShaderFromHLSL(_gpuDevice, in hlslinfo, out var metadata);
+    if (shaderHandle == nint.Zero)
     {
       throw new InvalidOperationException($"Failed to compile shader. {SDL.GetError()}");
     }
-    return wa;
+
+    return shaderHandle;
+
+
   }
   private static SDL.GPUTextureFormat GetTextureFormat(TextureFormat format) => format switch
   {

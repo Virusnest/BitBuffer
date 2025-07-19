@@ -23,3 +23,4 @@
 /Users/25kmaloney/BitBuffer/Example/bin/Debug/net8.0/runtimes/win-x86/native/SDL3.dll
 /Users/25kmaloney/BitBuffer/Example/bin/Debug/net8.0/shaderc.net.dll
 /Users/25kmaloney/BitBuffer/Example/bin/Debug/net8.0/StbImageSharp.dll
+/Users/25kmaloney/BitBuffer/Example/obj/Debug/net8.0/Example.sourcelink.json

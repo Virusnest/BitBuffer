@@ -10,3 +10,4 @@
 /Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/refint/BitBuffer.Framework.dll
 /Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.pdb
 /Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/ref/BitBuffer.Framework.dll
+/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/Debug/net8.0/BitBuffer.Framework.sourcelink.json
