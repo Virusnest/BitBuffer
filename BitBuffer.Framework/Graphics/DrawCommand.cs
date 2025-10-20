@@ -5,10 +5,9 @@ namespace BitBuffer.Framework.Graphics;
 
 public struct DrawCommand
 {
-  public RenderTarget RenderTarget;
-  public Material Material;
-  public List<VertexBuffer> VertexBuffers;
-  public List<bool> InstanceInputRates;
+  public Material? Material;
+  public List<VertexBuffer> VertexBuffers = new List<VertexBuffer>();
+  public List<bool> InstanceInputRates = new List<bool>();
   public IndexBuffer? IndexBuffer;
   public int InstanceCount;
   public int IndexOffset;
@@ -24,4 +23,22 @@ public struct DrawCommand
   public bool ScissorTest;
 
   public RectI ScissorRect;
+  public RectI? Viewport;
+
+  public DrawCommand() {
+    Material = null;
+    IndexBuffer = null;
+    InstanceCount = 0;
+    IndexOffset = 0;
+    VertexOffset = 0;
+    VertexCount = 0;
+    IndexCount = 0;
+    BlendMode = BlendMode.NonPremultiplied;
+    CullMode = CullMode.None;
+    DepthCompare = DepthCompare.Always;
+    DepthTest = false;
+    DepthWrite = false;
+    ScissorTest = false;
+    ScissorRect = default;
+  }
 }

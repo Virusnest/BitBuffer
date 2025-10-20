@@ -9,6 +9,7 @@ public class Texture : IGraphicsDisposable
   public readonly GraphicsState GraphicsState;
   public readonly int Width;
   public readonly int Height;
+  public readonly bool IsTargetAttachment;
   public TextureFormat Format;
 
   public Texture(GraphicsState graphicsState, int width, int height, TextureFormat format = TextureFormat.R8G8B8A8, RenderTarget? renderTarget = null)

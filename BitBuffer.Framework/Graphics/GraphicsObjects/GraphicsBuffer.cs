@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using SDL3;
 
 namespace BitBuffer.Framework.Graphics;
 
@@ -9,10 +10,10 @@ public class GraphicsBuffer : IGraphicsDisposable
 
   public GraphicsState GraphicsState;
 
-  public GraphicsBuffer(GraphicsState graphicsState)
+  public GraphicsBuffer(GraphicsState graphicsState,BufferType bufferType)
   {
     GraphicsState = graphicsState;
-    Resource = graphicsState.CreateBuffer();
+    Resource = graphicsState.CreateBuffer(bufferType);
   }
 
   public bool IsDisposed => Resource.Disposed;
@@ -34,7 +35,7 @@ public class VertexBuffer : GraphicsBuffer
   public readonly VertexLayout Layout;
 
   public VertexBuffer(GraphicsState graphicsState, VertexLayout layout)
-    : base(graphicsState)
+    : base(graphicsState,BufferType.Vertex)
   {
     Layout = layout;
   }
@@ -43,7 +44,7 @@ public class IndexBuffer : GraphicsBuffer
 {
   public readonly IndexFormat Format;
   public IndexBuffer(GraphicsState graphicsState, IndexFormat format)
-    : base(graphicsState)
+    : base(graphicsState,BufferType.Index)
   {
     Format = format;
   }

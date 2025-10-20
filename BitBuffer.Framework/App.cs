@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using BitBuffer.Framework.Graphics;
 using BitBuffer.Framework.Util;
 using SDL3;
@@ -28,6 +29,7 @@ public readonly record struct AppConfig
 public abstract class App
 {
   public GraphicsState GraphicsState = new GraphicsStateSDL();
+  private bool exiting = false;
 
   public Window Window { get; set; } = null!;
   public readonly AppConfig Config;
@@ -39,6 +41,21 @@ public abstract class App
     Config = config;
     Window = new Window(config.Width, config.Height, config.Title, this);
   }
+  
+  private void Tick()
+  {
+    if (!Window.IsOpen)
+    {
+      return;
+    }
+    PollEvents();
+    if (exiting) return;
+    Update();
+    GraphicsState.Clear(Color.CornflowerBlue);
+    Render();
+    GraphicsState.Present();
+  }
+  
   public void Run()
   {
     SDL.Init(SDL.InitFlags.Video | SDL.InitFlags.Events | SDL.InitFlags.Joystick | SDL.InitFlags.Gamepad);
@@ -46,24 +63,18 @@ public abstract class App
     GraphicsState.Initialize(Window);
     Init();
     PollEvents();
-    while (true)
-    {
-      if (!Window.IsOpen)
-      {
-        break;
-      }
-      PollEvents();
-      Update();
-      Render();
-      GraphicsState.Present();
-    }
+    while (!exiting) 
+      Tick();
   }
+  
+
   public abstract void Update();
   public abstract void Render();
   public abstract void Init();
 
   public void Exit()
   {
+    exiting = true;
     Window.Close();
   }
 
@@ -80,7 +91,7 @@ public abstract class App
         case SDL.EventType.Quit:
 
           Exit();
-
+          Console.WriteLine("Quit event received, exiting...");
           break;
 
         // input

@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 namespace BitBuffer.Framework.Graphics;
@@ -82,6 +83,9 @@ public struct Colour
   {
     return (R + G + B) / 3f;
   }
+  
+  public readonly Vector4 ToVector4()
+    => new(R / 255f, G / 255f, B / 255f, A / 255f);
   public int ToInt()
   {
     return (int)(R * 255) << 16 | (int)(G * 255) << 8 | (int)(B * 255) | (int)(A * 255) << 24;

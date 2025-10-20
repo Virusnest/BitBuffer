@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "SDL3-CS/3.2.14.2": {
+      "SDL3-CS/3.2.24": {
         "type": "package",
         "compile": {
           "lib/net8.0/SDL3-CS.dll": {
@@ -15,7 +15,7 @@
           }
         }
       },
-      "SDL3-CS.Native/3.2.4.2": {
+      "SDL3-CS.Native/3.2.24": {
         "type": "package",
         "compile": {
           "lib/net8.0/SDL3-CS.Native.dll": {
@@ -28,6 +28,22 @@
           }
         },
         "runtimeTargets": {
+          "runtimes/linux-arm64/native/libSDL3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libSDL3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libSDL3.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libSDL3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
           "runtimes/win-arm64/native/SDL3.dll": {
             "assetType": "native",
             "rid": "win-arm64"
@@ -35,10 +51,6 @@
           "runtimes/win-x64/native/SDL3.dll": {
             "assetType": "native",
             "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/SDL3.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
           }
         }
       },
@@ -67,10 +79,10 @@
     }
   },
   "libraries": {
-    "SDL3-CS/3.2.14.2": {
-      "sha512": "wqWjIm2EP7PmXRQfwSxY4YJDSrXZ0QmolJMCJcs9KY4b3vYBdlwo0U4/olPMdBx6yRzqhN1nGJjmeC9OJT6L1g==",
+    "SDL3-CS/3.2.24": {
+      "sha512": "HZNZ+xu74q0e/qc7tUBntkdkopGsMW5w9A2QwOLnLk2HCIlidvemVRUpe9oZYGpqC/o2dsqzLz4qpdd1SU4jWA==",
       "type": "package",
-      "path": "sdl3-cs/3.2.14.2",
+      "path": "sdl3-cs/3.2.24",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -86,14 +98,14 @@
         "lib/net9.0/SDL3-CS.dll",
         "lib/net9.0/SDL3-CS.xml",
         "logo.png",
-        "sdl3-cs.3.2.14.2.nupkg.sha512",
+        "sdl3-cs.3.2.24.nupkg.sha512",
         "sdl3-cs.nuspec"
       ]
     },
-    "SDL3-CS.Native/3.2.4.2": {
-      "sha512": "j8eg2tAG9pY+dNGloC4cBAH2YZ1/GzoivdFBh01sYUpFaW8FdNAUtYKSyNq09tRULSYO9lZzhW8t7Lru9eg5aA==",
+    "SDL3-CS.Native/3.2.24": {
+      "sha512": "pG5RsXRlaEXc0bAjALUaFl5eEjhYLzVjjnG548R9OTM7BMAW0CsWbeW0YmKRRudS+ExA3azjebAFl5o4Dkre/A==",
       "type": "package",
-      "path": "sdl3-cs.native/3.2.4.2",
+      "path": "sdl3-cs.native/3.2.24",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -106,10 +118,13 @@
         "lib/net9.0/SDL3-CS.Native.dll",
         "lib/net9.0/SDL3-CS.Native.xml",
         "logo.png",
+        "runtimes/linux-arm64/native/libSDL3.so",
+        "runtimes/linux-x64/native/libSDL3.so",
+        "runtimes/osx-arm64/native/libSDL3.dylib",
+        "runtimes/osx-x64/native/libSDL3.dylib",
         "runtimes/win-arm64/native/SDL3.dll",
         "runtimes/win-x64/native/SDL3.dll",
-        "runtimes/win-x86/native/SDL3.dll",
-        "sdl3-cs.native.3.2.4.2.nupkg.sha512",
+        "sdl3-cs.native.3.2.24.nupkg.sha512",
         "sdl3-cs.native.nuspec"
       ]
     },
@@ -142,8 +157,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "SDL3-CS >= 3.2.14.2",
-      "SDL3-CS.Native >= 3.2.4.2",
+      "SDL3-CS >= 3.2.24",
+      "SDL3-CS.Native >= 3.2.24",
       "StbImageSharp >= 2.30.15",
       "shaderc.net >= 0.1.0"
     ]
@@ -184,7 +199,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -192,11 +208,11 @@
         "dependencies": {
           "SDL3-CS": {
             "target": "Package",
-            "version": "[3.2.14.2, )"
+            "version": "[3.2.24, )"
           },
           "SDL3-CS.Native": {
             "target": "Package",
-            "version": "[3.2.4.2, )"
+            "version": "[3.2.24, )"
           },
           "StbImageSharp": {
             "target": "Package",
@@ -218,12 +234,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.17, 8.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.17, 8.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

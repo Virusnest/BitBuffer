@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 using System.Text;
-
+using BitBuffer.Framework.Graphics;
 using SDL3;
 
 namespace BitBuffer.Framework
@@ -40,6 +40,11 @@ namespace BitBuffer.Framework
     public void Show()
     {
       SDL.ShowWindow(Handle);
+    }
+    
+    public void Clear(Colour colour)
+    {
+      app.GraphicsState.Clear(colour);
     }
 
     public event Action? OnFocusGain = null;
