@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "m8FMPn4y01g=",
+  "dgSpecHash": "pTlZGe+1UNI=",
   "success": true,
-  "projectFilePath": "/Users/25kmaloney/BitBuffer/Example/Example.csproj",
+  "projectFilePath": "/home/virusnest/RiderProjects/BitBuffer/Example/Example.csproj",
   "expectedPackageFiles": [
-    "/Users/25kmaloney/.nuget/packages/sdl3-cs/3.2.24/sdl3-cs.3.2.24.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/sdl3-cs.native/3.2.24/sdl3-cs.native.3.2.24.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/shaderc.net/0.1.0/shaderc.net.0.1.0.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/stbimagesharp/2.30.15/stbimagesharp.2.30.15.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/microsoft.netcore.app.ref/8.0.17/microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.17/microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
-    "/Users/25kmaloney/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.17/microsoft.netcore.app.host.osx-arm64.8.0.17.nupkg.sha512"
+    "/home/virusnest/.nuget/packages/sdl3-cs/3.2.24/sdl3-cs.3.2.24.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/sdl3-cs.native/3.2.24/sdl3-cs.native.3.2.24.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/shaderc.net/0.1.0/shaderc.net.0.1.0.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/stbimagesharp/2.30.15/stbimagesharp.2.30.15.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/microsoft.netcore.app.ref/8.0.17/microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.17/microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
+    "/home/virusnest/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.17/microsoft.netcore.app.host.linux-x64.8.0.17.nupkg.sha512"
   ],
   "logs": []
 }

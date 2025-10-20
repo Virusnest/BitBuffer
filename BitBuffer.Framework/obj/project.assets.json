@@ -164,19 +164,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/25kmaloney/.nuget/packages/": {}
+    "/home/virusnest/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/25kmaloney/BitBuffer/BitBuffer.Framework/BitBuffer.Framework.csproj",
+      "projectUniqueName": "/home/virusnest/RiderProjects/BitBuffer/BitBuffer.Framework/BitBuffer.Framework.csproj",
       "projectName": "BitBuffer.Framework",
-      "projectPath": "/Users/25kmaloney/BitBuffer/BitBuffer.Framework/BitBuffer.Framework.csproj",
-      "packagesPath": "/Users/25kmaloney/.nuget/packages/",
-      "outputPath": "/Users/25kmaloney/BitBuffer/BitBuffer.Framework/obj/",
+      "projectPath": "/home/virusnest/RiderProjects/BitBuffer/BitBuffer.Framework/BitBuffer.Framework.csproj",
+      "packagesPath": "/home/virusnest/.nuget/packages/",
+      "outputPath": "/home/virusnest/RiderProjects/BitBuffer/BitBuffer.Framework/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/25kmaloney/.nuget/NuGet/NuGet.Config"
+        "/home/virusnest/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -249,7 +249,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/virusnest/.dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

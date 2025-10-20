@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BitBuffer.Framework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1116e1e67684ca94cb2ace6cdc420313b9aa960")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ea81cf321f0bad20848a911d0164ad4ff6c5df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BitBuffer.Framework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BitBuffer.Framework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
